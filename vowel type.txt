@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+class VowelCount
+{
+public static void main(String[] args)
+{
+Scanner sc = new Scanner(System.in);
+
+    int a = 0, e = 0, i = 0, o = 0, u = 0;
+
+    while (true)
+    {
+        System.out.print("Enter a sentence: ");
+        String str = sc.nextLine();
+
+        if (str.equalsIgnoreCase("quit"))
+        {
+            break;
+        }
+
+        for (int j = 0; j < str.length(); j++)
+        {
+            char ch = Character.toLowerCase(str.charAt(j));
+
+            if (ch == 'a')
+                a++;
+            else if (ch == 'e')
+                e++;
+            else if (ch == 'i')
+                i++;
+            else if (ch == 'o')
+                o++;
+            else if (ch == 'u')
+                u++;
+        }
+    }
+
+    System.out.println("\nTotal count of each vowel:");
+    System.out.println("A = " + a);
+    System.out.println("E = " + e);
+    System.out.println("I = " + i);
+    System.out.println("O = " + o);
+    System.out.println("U = " + u);
+}
+}
